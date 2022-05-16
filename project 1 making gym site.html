@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Gym</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Monoton&family=Teko:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lalezar&family=Lobster&family=Monoton&family=Teko:wght@300&display=swap"
+        rel="stylesheet"> 
+    <style>
+        /* css reset  */
+        * {
+            margin: 0;
+            padding: 0px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        /* navbar desigining  */
+
+        #navbar {
+            display: flex;
+            background-color: rgb(190, 86, 86);
+            height: 45px;
+        }
+
+        #logo img {
+            height: 100px;
+        }
+
+        /* navbar styling  */
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 45px;
+            font-family: 'Lobster', cursive;
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 7px;
+            margin: 3px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            margin-top: 24px;
+            margin-left: 34px;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        #navbar::before {
+            content: "";
+            position: absolute;
+            height: 319px;
+            width: 100%;
+            background: url('gym bg.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: .87;
+        }
+
+        /* #home styling */
+        #section1 {
+            display: block;
+
+        }
+
+        .heading {
+            margin: auto;
+            width: 650px;
+            margin-top: 99px;
+            margin-left: 374px;
+            font-size: 2.4rem;
+            font-family: 'Lalezar', cursive;
+            color: white;
+        }
+
+        .heading1 {
+            font-size: 1.3rem;
+            color: wheat;
+
+        }
+
+        .center {
+            text-align: center;
+            /* font-size: 1.4rem; */
+        }
+
+        .btn {
+            display: block;
+            margin: auto;
+            width: 156px;
+            cursor: pointer;
+            margin-top: 12px;
+            padding: 2px;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            background-color: rgb(212, 208, 208);
+            
+        }
+
+        .btn:hover {
+            width: 200px;
+            font-size: 1.4rem;
+            color: black;
+            background-color: rgba(115, 236, 236, 0.877);
+        }
+
+        /* fess-structure section  */
+        .heading2 {
+            margin: 37px;
+            font-size: 2.1rem;
+            margin-bottom: 23px;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            width: 1147px;
+            /* border: 5px solid rgb(106, 245, 106); */
+            border-collapse: collapse;
+            margin-left: 0px;
+            padding: 10px;
+            font-size: 34px;
+            border-radius: 73px;
+            color:#eeca06fa;
+            border: 5px solid rgb(124 79 79);
+        }
+
+        #table1::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 335px;
+            background: url('gym bg1.jpg');
+            z-index: -4;
+            opacity: .8;
+            color: white;
+        }
+
+        .trainer {
+            display: flex;
+        }
+
+        .ourcoches {
+            display: block;
+            border: 5px solid red;
+            border-radius: 23px;
+            margin: 4px;
+            padding: 4px;
+            background-color: rgb(250, 245, 245);
+
+        }
+
+        .ourcoches img {
+            width: 241px;
+            height: 312px;
+            margin: 28px;
+            margin-bottom: 13px;
+            display: block;
+            border-radius: 97px;
+            padding-left: 32px;
+
+        }
+
+       /* sponsors-section  */
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #client-section::before {
+            content: "";
+            position: absolute;
+            height: 54%;
+            width: 100%;
+            background: url('gym bg3.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.9;
+        }
+
+        #clients img {
+            height: 116px;
+            padding: 21px;
+        }
+
+        .h-primary3 {
+            margin-top: 19px;
+            font-size: 1.9rem;
+            padding: 12px;
+        }
+        #contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: url('contact\ us1.jpg') no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:34px;
+    
+}
+
+#contact-box input , #contact-box textarea{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    margin: 9px;
+}
+
+#contact-box form{
+width:40%;
+    
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Teko', sans-serif;
+}
+.h-primary4{
+    font-size: 1.9rem;
+    padding: 12px;
+    margin-top: 25px;
+}
+
+/* footer  */
+footer{
+    background: black;
+    padding: 5px 12px;
+    color: white;
+}
+.gym{
+    display:block;
+    flex-direction: column;
+    margin-left: 23px;
+    font-size: 1.3rem;
+}
+.gym1{
+    display:block;
+    flex-direction: column;
+    margin-left: 84px;
+    font-size: 1.3rem;
+}
+#Home a{
+    text-decoration: none;
+}
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo_of_gym-removebg-preview.png" alt="Super Gym">
+        </div>
+        <ul class="box">
+            <li class="item"><a href="#Home">Home</a></li>
+            <li class="item"><a href="#fees Structure-section">Fees Structure</a></li>
+            <li class="item"><a href="#about us-section">About Us</a></li>
+            <li class="item"><a href="#sponsors-section">Sponsors</a></li>
+        </ul>
+    </nav>
+    <section id="Home">
+        <h1 class="heading">WELCOME TO SUPER GYM</h1>
+        <p class="heading1 center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corrupti unde
+            voluptas ad, eius a</p>
+        <p class="heading1 center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic ipsam labore ab?</p>
+<a href="#contact"><button class="btn">Register to Join</button></a>
+    </section>
+    <section id="fees Structure-section">
+        <div class="heading2 center">
+            <h2 class="heading2 center">Fees Structure</h2>
+        </div>
+        <div id="table1">
+            <table>
+                <tr>
+                    <th>Duration</th>
+                    <th>Fees</th>
+                    <th>Trainer Fees</th>
+                    <th>Total Fees with Trainer</th>
+                    <th>Total Fees without Trainer</th>
+                </tr>
+                <tr>
+                    <td>Monthly</td>
+                    <td>500 Rs</td>
+                    <td>100 Rs</td>
+                    <td>600 Rs</td>
+                    <td>500 Rs</td>
+                </tr>
+                <tr>
+                    <td>6-Months</td>
+                    <td>2800 Rs</td>
+                    <td>800 Rs</td>
+                    <td>3600 Rs</td>
+                    <td>2800 Rs</td>
+                </tr>
+                <tr>
+                    <td>Yearly</td>
+                    <td>5500 Rs</td>
+                    <td>00 Rs</td>
+                    <td>5500 Rs</td>
+                    <td>5500 Rs</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="about us-section">
+        <h2 class="heading2 center">Our coches</h2>
+        <div class="trainer">
+            <div class="ourcoches">
+                <img src="fitness1-removebg-preview.png" alt="coadch kunal">
+                <h2 class="heading4 center">Fitness Trainer</h2>
+                <p class="heading5 center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro delectus
+                    officiis commodi!</p>
+            </div>
+            <div class="ourcoches">
+                <img src="yogafemale-removebg-preview.png" alt="coach sonakshi">
+                <h2 class="heading4 center">Yoga Trainer</h2>
+                <p class="heading5 center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolores impedit
+                    quae.</p>
+            </div>
+            <div class="ourcoches">
+                <img src="bodybuilding-removebg-preview.png" alt="coadch Apporv">
+                <h2 class="heading4 center">Body-Building</h2>
+                <p class="heading5 center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus mollitia
+                    nobis repudiandae.</p>
+            </div>
+        </div>
+    </section>
+    <section id="sponsors-section">
+        <h1 class="h-primary3 center">Our Sponsors</h1>
+        <div id="clients">
+            <div class="clients-item">
+                <img src="partner logo1.jpg" alt="">
+            </div>
+            <div class="clients-item">
+                <img src="partner_logo3-removebg-preview.png" alt="">
+            </div>
+            <div class="clients-item">
+                <img src="partner_logo2-removebg-preview.png" alt="">
+            </div>
+            <div class="clients-item">
+                <img src="apple_logo-removebg-preview.png" alt="">
+            </div>
+            <div class="clients-item">
+                <img src="partner_logo4-removebg-preview.png" alt="">
+            </div>
+
+        </div>
+    </section>
+   
+    <section id="contact">
+        <h1 class="h-primary4 center">Register</h1>
+        <h4 class="gym"> Gym-Timing - MON - SAT </h4>
+           <h4 class="gym1"> 9:00 AM to 9:00 PM</h4>
+        <div id="contact-box">
+            <form action="kunal.txt" target="_blank">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name ">
+                </div>
+                <div class="form-group">
+                 <label for="E-mail">E-mail: </label>
+                 <input type="email" name="email" id="email" placeholder="Enter your E-mail">
+             </div>
+             <div class="form-group">
+                 <label for="number">Mobile Number: </label>
+                 <input type="number" name="number" id="number" placeholder="Enter your Mobile Number ">
+             </div>
+             <div class="form-group">
+                 <label for="msg">Location : </label>
+                 <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+             </div>
+             <div class="form-group">
+                 <label for="name"></label>
+                 <input type="submit" name="submit" id="submit">
+             </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            copyright &copy; www.SuperGym.com all rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
